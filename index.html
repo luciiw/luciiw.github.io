@@ -151,15 +151,10 @@
 					</div>
 					<div class="form-group">
 						<div class="col-sm-10 col-sm-offset-2">
-							<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+							<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary" onclick="success()">
 
 						</div>
 					</div>
-					<div class="form-group">
-						<div class="col-sm-10 col-sm-offset-2">
-						</div>
-					</div>
-
 					<input type="hidden" name="_next" value="http://luciiw.github.io/" />
 				</form> 
 
@@ -184,6 +179,12 @@
 	<script src="js/jquery-1.10.2.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
+
+	<script>
+	function success() {
+		alert('Sent!');
+	}
+	</script>
 
 </body>
 
