@@ -155,7 +155,6 @@
 
 						</div>
 					</div>
-					<input type="hidden" name="_next" value="http://luciiw.github.io/" action="sucess()"/>
 				</form> 
 
 	</div>
@@ -181,9 +180,27 @@
 	<script src="js/main.js"></script>
 
 	<script>
-	function success() {
-		alert('Sent!');
-	}
+	var $contactForm = $('#contact-form');
+	$contactForm.submit(function(e) {
+		e.preventDefault();
+		$.ajax({
+			url: '//formspree.io/your@email.com',
+			method: 'POST',
+			data: $(this).serialize(),
+			dataType: 'json',
+			beforeSend: function() {
+				$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+			},
+			success: function(data) {
+				$contactForm.find('.alert--loading').hide();
+				$contactForm.append('<div class="alert alert--success">Message sent!</div>');
+			},
+			error: function(err) {
+				$contactForm.find('.alert--loading').hide();
+				$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+			}
+		});
+	})
 	</script>
 
 </body>
