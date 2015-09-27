@@ -6,7 +6,25 @@
 	<title>Lucy Wang</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" />
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
+	<script type="text/javascript">
+	$(function() {
+	  $('.chart').easyPieChart({
+	    scaleColor: "#ecf0f1",
+	    lineWidth: 20,
+	    lineCap: 'butt',
+	    barColor: '#1abc9c',
+	    trackColor: "#ecf0f1",
+	    size: 160,
+	    animate: 500
+	  });
+	});
+	</script>
 
 
 </head>
@@ -41,8 +59,10 @@
 	<div id="home" class="home">
 	  <div class="text-vcenter"> <br> <br> <br> <br> <br>
 	    <h1>LUCY WANG</h1>
-	    <h3>web & mobile developer</h3> <br>
-	    <a href="#about"><img src="http://victorvalentin.dk/image/downButton.png" height="50px" ></a>
+	    <h3>web & mobile developer</h3> 
+	    <em>this website is currently under construction</em> <br> <br>
+
+	    	    <a href="#about"><img src="http://victorvalentin.dk/image/downButton.png" height="50px" ></a>
 	    <br> <br>
 	  </div>
 	</div>
@@ -53,16 +73,32 @@
 	  <div class="container" class="pad-section">
 	  	<h2> about </h2> <br>
 	    <div class="row">
-	      <div class="col-sm-3 text-center">
-	        <img src="http://www.iconsdb.com/icons/preview/white/circle-xxl.png" alt=""/>
-	      </div>
-	      <div class="col-sm-9 text-center">
-	        <p class="lead"><br><strong>Hi, my name is Lucy.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum metus et ligula venenatis, at rhoncus nisi molestie. Pellentesque porttitor elit suscipit massa laoreet metus. Sed interdum metus et ligula venenatis, at rhoncus nisi molestie. Pellentesque porttitor elit suscipit massa laoreet metus.</p>
+	      <div class="col-sm-12 text-center">
+	      	<div class="col-sm-6">
+	      		<h4>Who am I?</h4>
+	      		<div class= "col-sm-5">
+	      			<img src="images/icon.png" width="200px" alt=""/>
+	      		</div>
+	      		<div class= "col-sm-7">
+	        		<p style="text-align:left;">
+	        			<strong>Hi, I am Lucy.</strong> I am a second year Computer Science student at University of Waterloo. I am interested in all aspects of software development, from frontend to backend to mobile. Please click <strong> here </strong> to download a copy of my resume. 
+	        		</p>
+	       		 </div>
+	      	</div>
+	      	<div class="col-sm-6">
+	      		<h4>Skills</h4>
+	      		<div class="chart" data-percent="80">HTML5</div>
+				<div class="chart" data-percent="30">CSS3</div>
+				<div class="chart" data-percent="60">SASS</div>
+				<div class="chart" data-percent="50">jQuery</div>
+				<div class="chart" data-percent="11">AngularJS</div>
+				<div class="chart" data-percent="20">BackboneJS</div>
+				<div class="chart" data-percent="30">NodeJS</div>
+  				<div class="chart" data-percent="60">PHP</div>
+	      	</div>
 	      </div>
 	    </div>
 	  </div>
-	  <br> <br>
-	  	    <h4> click <strong>here</strong> to download a copy of my resume </h4>
 	  <br> <br>  <br> <br>
 	</div>
 	<!-- /second section -->
@@ -77,19 +113,19 @@
 	    </div>
 	    <ul class="timeline">
 	        <li>
-	          <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+	          <div class="timeline-badge"></div>
 	          <div class="timeline-panel">
 	            <div class="timeline-heading">
 	              <h4 class="timeline-title">Started School at UWaterloo</h4>
-	              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> September 2015</small></p>
+	              <p><small class="text-muted">September 2015</small></p>
 	            </div>
 	            <div class="timeline-body">
-	              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. </p>
+	              <p>Courses Taken</p>
 	            </div>
 	          </div>
 	        </li>
 	        <li class="timeline-inverted">
-	          <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+	          <div class="timeline-badge warning"></div>
 	          <div class="timeline-panel">
 	            <div class="timeline-heading">
 	              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
@@ -100,7 +136,7 @@
 	          </div>
 	        </li>
 	        <li>
-	          <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+	          <div class="timeline-badge danger"></div>
 	          <div class="timeline-panel">
 	            <div class="timeline-heading">
 	              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
